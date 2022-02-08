@@ -23,7 +23,7 @@ const getRandomIndex = (num) => {
 	return Math.floor(Math.random() * num);
 };
 
-let finalMessage = {};
+let finalMessage = { err: "" };
 
 //from mainCollectino make a finalMessage obj
 for (const prop in mainCollection) {
@@ -54,7 +54,7 @@ for (const prop in mainCollection) {
 
 //function to print your resonse (lucky planet, lucky color, quote) and formated
 const getMessage = (obj) => {
-	if (obj.hasOwnProperty(err)) return "Error, something went wrong!";
+	if (obj.err) return "Error, something went wrong!";
 	let message = "";
 	message += "Are u ready to feel lucky?\n";
 	message += `Your lucky planet: ${obj.planet}\n
