@@ -55,12 +55,12 @@ for (const prop in mainCollection) {
 //function to print your resonse (lucky planet, lucky color, quote) and formated
 const getMessage = (obj) => {
 	if (obj.hasOwnProperty(error)) return "Error, something went wrong!";
-    let message = ""
-	message += "Are u ready to feel lucky?\n");
+	let message = "";
+	message += "Are u ready to feel lucky?\n";
 	message += `Your lucky planet: ${obj.planet}\n
                 Your lucky color: ${obj.color}\n
                 Message for you: "${obj.quote}"`;
-                return message
+	return message;
 };
 
-Console.log(getMessage(finalMessage));
+console.log(getMessage(finalMessage));
