@@ -37,24 +37,24 @@ for (const prop in mainCollection) {
 				}
 				break;
 			case "colors":
-				if (finalMessage.hasOwnProperty("color")) {
+				if (!finalMessage.hasOwnProperty("color")) {
 					finalMessage.color = element[randomIndex];
 				}
 				break;
 			case "quotes":
-				if (finalMessage.hasOwnProperty("quote")) {
+				if (!finalMessage.hasOwnProperty("quote")) {
 					finalMessage.quote = element[randomIndex];
 				}
 				break;
 			default:
-				finalMessage.error = "Something went wrong!";
+				finalMessage.err = "Something went wrong!";
 		}
 	}
 }
 
 //function to print your resonse (lucky planet, lucky color, quote) and formated
 const getMessage = (obj) => {
-	if (obj.hasOwnProperty(error)) return "Error, something went wrong!";
+	if (obj.hasOwnProperty(err)) return "Error, something went wrong!";
 	let message = "";
 	message += "Are u ready to feel lucky?\n";
 	message += `Your lucky planet: ${obj.planet}\n
