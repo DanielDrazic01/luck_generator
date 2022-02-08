@@ -25,6 +25,7 @@ const getRandomIndex = (num) => {
 
 let finalMessage = {};
 
+//from mainCollectino make a finalMessage obj
 for (const prop in mainCollection) {
 	if (Object.hasOwnProperty.call(mainCollection, prop)) {
 		const element = mainCollection[prop];
@@ -50,3 +51,16 @@ for (const prop in mainCollection) {
 		}
 	}
 }
+
+//function to print your resonse (lucky planet, lucky color, quote) and formated
+const getMessage = (obj) => {
+	if (obj.hasOwnProperty(error)) return "Error, something went wrong!";
+    let message = ""
+	message += "Are u ready to feel lucky?\n");
+	message += `Your lucky planet: ${obj.planet}\n
+                Your lucky color: ${obj.color}\n
+                Message for you: "${obj.quote}"`;
+                return message
+};
+
+Console.log(getMessage(finalMessage));
